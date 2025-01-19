@@ -1,4 +1,4 @@
-// List of random texts
+// List
 const texts = [
   "8386",
   "mẹ m béo!",
@@ -9,14 +9,14 @@ const texts = [
   "kệ mẹ m",
 ];
 
-// Select the element where the random text will appear
+// Vi tri
 const randomTextElement = document.getElementById("random-text");
 
-// Function to generate a random text
+// Code
 function getRandomText() {
   const randomIndex = Math.floor(Math.random() * texts.length);
   return texts[randomIndex];
 }
 
-// Display a random text when the page loads
+// Hien thi
 randomTextElement.textContent = getRandomText();
