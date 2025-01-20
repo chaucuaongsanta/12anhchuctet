@@ -1,4 +1,4 @@
-// List of random texts
+// Lời chúc
 const texts = [
   "Hoa khai phú quý, trúc báo bình an.\nCung chúc tân xuân, vạn sự như ý.\nNhân dịp Tết Nguyên đán 2025, xin chúc bạn có một năm mới luôn tràn đầy sức khỏe, thành công và hạnh phúc bên cạnh những người mình yêu thương.",
   "Xuân về rộn rã gần xa,\nTài lộc như nước vào nhà.\nChúc nhau sức khỏe thuận hòa,\nMột năm may mắn nở hoa.\nNhân dịp năm mới xuân Ất Tỵ 2025, xin chúc bạn và gia đình có một năm mới luôn tràn đầy sức khỏe, hạnh phúc và thành công cùng một mùa Tết bình an và sum họp bên cạnh những người mình yêu thương. Happy New Year!",
@@ -25,7 +25,7 @@ const texts = [
 // t quá rảnh rỗi :)))
 const secretText = "tcs1tg";
 
-// Function to display a random text
+// Function
 function displayRandomText() {
   const randomIndex = Math.floor(Math.random() * texts.length);
   const randomText = texts[randomIndex];
@@ -33,5 +33,5 @@ function displayRandomText() {
   document.getElementById('random-text').innerText = isSecret ? secretText : randomText;
 }
 
-// Call the function to display a random text on page load
+// Điều kiện
 window.onload = displayRandomText;
