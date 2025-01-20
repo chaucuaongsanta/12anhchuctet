@@ -1,8 +1,8 @@
 // List
 const texts = [
-  "Hoa khai phú quý, trúc báo bình an.
+  " Hoa khai phú quý, trúc báo bình an.
   Cung chúc tân xuân, vạn sự như ý.
-  Nhân dịp Tết Nguyên đán 2025, xin chúc bạn có một năm mới luôn tràn đầy sức khỏe, thành công và hạnh phúc bên cạnh những người mình yêu thương.",
+  Nhân dịp Tết Nguyên đán 2025, xin chúc bạn có một năm mới luôn tràn đầy sức khỏe, thành công và hạnh phúc bên cạnh những người mình yêu thương. ",
   "Xuân về rộn rã gần xa,
   Tài lộc như nước vào nhà.
   Chúc nhau sức khỏe thuận hòa,
