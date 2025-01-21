@@ -25,12 +25,12 @@ const texts = [
 // t quá rảnh rỗi :)))
 const secretText = "tcs1tg";
 
-// Check điều kiện load
+// Global variables to track loading animation and displayed texts
 let loadingAnimationRunning = false;
 let displayedTexts = new Set();
 let loadCount = 0;
 
-// Function random
+// Function to display random text
 function displayRandomText() {
   if (loadCount >= 25) return; // Stop after 25 loads
   loadCount++;
@@ -53,7 +53,7 @@ function displayRandomText() {
   document.getElementById('random-text').innerHTML = randomText; // Use innerHTML to render <br>
 }
 
-// Function loading
+// Function to add loading animation
 function addLoadingAnimation() {
   if (loadingAnimationRunning) return; // Prevent re-running the animation if already running
   loadingAnimationRunning = true; // Set the flag to indicate loading animation is running
@@ -62,15 +62,14 @@ function addLoadingAnimation() {
   let dots = 0;
   const intervalId = setInterval(() => {
     loadingText.innerHTML = 'xin chờ một chút' + '.'.repeat(dots);
-    dots = (dots + 1) % 4; 
-
-  }, 400);
+    dots = (dots + 1) % 4; // Cycle through 0, 1, 2, 3 dots
+  }, 500); // Update every 500ms
 
   setTimeout(() => {
     clearInterval(intervalId); // Clear the interval to stop the loading animation
     loadingAnimationRunning = false; // Reset the flag
     displayRandomText(); // Display random text
-  }, 3500); // Display random text after 3 seconds
+  }, 3000); // Display random text after 3 seconds
 }
 
 // Execute the loading animation function on window load
