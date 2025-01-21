@@ -34,5 +34,18 @@ function displayRandomText() {
   document.getElementById('random-text').innerHTML = isSecret ? secretText : randomText; // Use innerHTML to render <br>
 }
 
-// Điều kiện
-window.onload = displayRandomText;
+// Loading
+function addLoadingAnimation() {
+  const loadingText = document.getElementById('random-text');
+  let dots = 0;
+  setInterval(() => {
+    loadingText.innerHTML = 'xin chờ một chút' + '.'.repeat(dots);
+    dots = (dots + 1) % 4; 
+  }, 500); 
+}
+
+// Execute
+window.onload = () => {
+  addLoadingAnimation();
+  setTimeout(displayRandomText, 3000); // Display random text after 3 seconds
+};
