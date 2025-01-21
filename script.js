@@ -25,7 +25,7 @@ const texts = [
 // t quá rảnh rỗi :)))
 const secretText = "tcs1tg";
 
-// Function
+// Function to display random text
 function displayRandomText() {
   const randomIndex = Math.floor(Math.random() * texts.length);
   let randomText = texts[randomIndex];
@@ -34,20 +34,20 @@ function displayRandomText() {
   document.getElementById('random-text').innerHTML = isSecret ? secretText : randomText; // Use innerHTML to render <br>
 }
 
-// Loading
+// Function to add loading animation
 function addLoadingAnimation() {
   const loadingText = document.getElementById('random-text');
   let dots = 0;
   const intervalId = setInterval(() => {
     loadingText.innerHTML = 'xin chờ một chút' + '.'.repeat(dots);
-    dots = (dots + 1) % 4;
-  }, 400); 
+    dots = (dots + 1) % 4; // Cycle through 0, 1, 2, 3 dots
+  }, 500); // Update every 500ms
 
   setTimeout(() => {
-    clearInterval(intervalId); 
-    displayRandomText(); 
-  }, 2000); 
+    clearInterval(intervalId); // Clear the interval to stop the loading animation
+    displayRandomText(); // Display random text
+  }, 3000); // Display random text after 3 seconds
 }
 
-// Execute
+// Execute the loading animation function on window load
 window.onload = addLoadingAnimation;
