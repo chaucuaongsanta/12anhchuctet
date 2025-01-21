@@ -97,6 +97,3 @@ window.onload = () => {
     displayRandomText(); // Display random text
   }, 3560); // Display random text after 3.56 seconds
 }
-
-// Execute the loading animation function on window load
-window.onload = addLoadingAnimation;
