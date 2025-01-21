@@ -53,18 +53,44 @@ function displayRandomText() {
   document.getElementById('random-text').innerHTML = randomText; // Use innerHTML to render <br>
 }
 
-// Function to add loading animation
-function addLoadingAnimation() {
-  if (loadingAnimationRunning) return; // Prevent re-running the animation if already running
-  loadingAnimationRunning = true; // Set the flag to indicate loading animation is running
-
-  const loadingText = document.getElementById('random-text');
+// Function to show the loading animation
+function showLoadingAnimation() {
+  const loadingText = document.getElementById('loading-text');
   let dots = 0;
   const intervalId = setInterval(() => {
-    loadingText.innerHTML = 'xin chờ một chút' + '.'.repeat(dots);
-    dots = (dots + 1) % 4; // Cycle through 0, 1, 2, 3 dots
-  }, 400); // Update every 400ms
+    loadingText.innerHTML = 'Loading' + '.'.repeat(dots);
+    dots = (dots + 1) % 4;
+  }, 400);
+  return intervalId;
+}
 
+// Function to hide the loading animation
+function hideLoadingAnimation(intervalId) {
+  clearInterval(intervalId);
+  document.getElementById('loading-text').innerHTML = '';
+}
+
+// Call this function to add loading animations to images
+function addImageLoadingAnimations() {
+  const images = document.querySelectorAll('img');
+  images.forEach((img) => {
+    img.addEventListener('loadstart', () => {
+      const intervalId = showLoadingAnimation();
+      img.dataset.loadingIntervalId = intervalId;
+    });
+    img.addEventListener('load', () => {
+      const intervalId = img.dataset.loadingIntervalId;
+      hideLoadingAnimation(intervalId);
+      delete img.dataset.loadingIntervalId;
+    });
+  });
+}
+
+// Execute the image loading animations function on window load
+window.onload = () => {
+  addLoadingAnimation(); // Existing function call
+  addImageLoadingAnimations(); // New function call
+};
   setTimeout(() => {
     clearInterval(intervalId); // Clear the interval to stop the loading animation
     loadingAnimationRunning = false; // Reset the flag
