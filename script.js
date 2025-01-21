@@ -63,13 +63,13 @@ function addLoadingAnimation() {
   const intervalId = setInterval(() => {
     loadingText.innerHTML = 'xin chờ một chút' + '.'.repeat(dots);
     dots = (dots + 1) % 4; // Cycle through 0, 1, 2, 3 dots
-  }, 500); // Update every 500ms
+  }, 250); // Update every 500ms
 
   setTimeout(() => {
     clearInterval(intervalId); // Clear the interval to stop the loading animation
     loadingAnimationRunning = false; // Reset the flag
     displayRandomText(); // Display random text
-  }, 3000); // Display random text after 3 seconds
+  }, 2200); // Display random text after 3 seconds
 }
 
 // Execute the loading animation function on window load
