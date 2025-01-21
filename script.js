@@ -53,7 +53,7 @@ function addLoadingAnimation() {
     clearInterval(intervalId); // Clear the interval to stop the loading animation
     loadingAnimationRunning = false; // Reset the flag
     displayRandomText(); // Display random text
-  }, 2000); // Display random text after 3 seconds
+  }, 4000); // Display random text after 3 seconds
 }
 
 // Execute the loading animation function on window load
