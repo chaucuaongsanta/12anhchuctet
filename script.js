@@ -25,17 +25,23 @@ const texts = [
 // t quá rảnh rỗi :)))
 const secretText = "tcs1tg";
 
+// Global variable to track if loading animation is running
+let loadingAnimationRunning = false;
+
 // Function to display random text
 function displayRandomText() {
   const randomIndex = Math.floor(Math.random() * texts.length);
   let randomText = texts[randomIndex];
   randomText = randomText.replace(/\n/g, '<br>'); // Replace newline characters with <br>
-  const isSecret = Math.random() < 0.00001; 
+  const isSecret = Math.random() < 0.00001;
   document.getElementById('random-text').innerHTML = isSecret ? secretText : randomText; // Use innerHTML to render <br>
 }
 
 // Function to add loading animation
 function addLoadingAnimation() {
+  if (loadingAnimationRunning) return; // Prevent re-running the animation if already running
+  loadingAnimationRunning = true; // Set the flag to indicate loading animation is running
+
   const loadingText = document.getElementById('random-text');
   let dots = 0;
   const intervalId = setInterval(() => {
@@ -45,6 +51,7 @@ function addLoadingAnimation() {
 
   setTimeout(() => {
     clearInterval(intervalId); // Clear the interval to stop the loading animation
+    loadingAnimationRunning = false; // Reset the flag
     displayRandomText(); // Display random text
   }, 3000); // Display random text after 3 seconds
 }
