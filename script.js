@@ -74,3 +74,6 @@ function addLoadingAnimation() {
 
 // Execute the loading animation function on window load
 window.onload = addLoadingAnimation;
+
+// Call the loading animation function for the first "xin chờ một chút"
+addLoadingAnimation();
