@@ -90,10 +90,12 @@ function addImageLoadingAnimations() {
 window.onload = () => {
   addLoadingAnimation(); // Existing function call
   addImageLoadingAnimations(); // New function call
-};
+  
+  const intervalId = showLoadingAnimation(); // Start the loading animation
+  
   setTimeout(() => {
     clearInterval(intervalId); // Clear the interval to stop the loading animation
     loadingAnimationRunning = false; // Reset the flag
     displayRandomText(); // Display random text
   }, 3560); // Display random text after 3.56 seconds
-}
+};
