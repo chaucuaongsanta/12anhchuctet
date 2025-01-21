@@ -30,11 +30,20 @@ let loadingAnimationRunning = false;
 
 // Function to display random text
 function displayRandomText() {
-  const randomIndex = Math.floor(Math.random() * texts.length);
-  let randomText = texts[randomIndex];
+  if (loadCount >= 25) return; // Stop after 25 loads
+  loadCount++;
+  
+  let randomIndex;
+  let randomText;
+  do {
+    randomIndex = Math.floor(Math.random() * texts.length);
+    randomText = texts[randomIndex];
+  } while (displayedTexts.has(randomText) && displayedTexts.size < texts.length);
+
+  displayedTexts.add(randomText);
   randomText = randomText.replace(/\n/g, '<br>'); // Replace newline characters with <br>
+  document.getElementById('random-text').innerHTML = randomText; // Use innerHTML to render <br>
   const isSecret = Math.random() < 0.00001;
-  document.getElementById('random-text').innerHTML = isSecret ? secretText : randomText; // Use innerHTML to render <br>
 }
 
 // Function to add loading animation
