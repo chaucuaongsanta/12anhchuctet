@@ -28,9 +28,10 @@ const secretText = "tcs1tg";
 // Function
 function displayRandomText() {
   const randomIndex = Math.floor(Math.random() * texts.length);
-  const randomText = texts[randomIndex];
+  let randomText = texts[randomIndex];
+  randomText = randomText.replace(/\n/g, '<br>'); // Replace newline characters with <br>
   const isSecret = Math.random() < 0.00001; 
-  document.getElementById('random-text').innerText = isSecret ? secretText : randomText;
+  document.getElementById('random-text').innerHTML = isSecret ? secretText : randomText; // Use innerHTML to render <br>
 }
 
 // Điều kiện
