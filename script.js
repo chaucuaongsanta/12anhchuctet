@@ -25,14 +25,14 @@ const texts = [
 // t quá rảnh rỗi :)))
 const secretText = "tcs1tg";
 
-// Global variables to track loading animation and displayed texts
+// Check load
 let loadingAnimationRunning = false;
 let displayedTexts = new Set();
 let loadCount = 0;
 
-// Function to display random text
+// Function random lời chúc
 function displayRandomText() {
-  if (loadCount >= 25) return; // Stop after 25 loads
+  if (loadCount >= 25) return;
   loadCount++;
 
   let randomIndex;
@@ -49,31 +49,29 @@ function displayRandomText() {
     displayedTexts.add(randomText);
   }
 
-  randomText = randomText.replace(/\n/g, '<br>'); // Replace newline characters with <br>
-  document.getElementById('random-text').innerHTML = randomText; // Use innerHTML to render <br>
+  randomText = randomText.replace(/\n/g, '<br>');
+  document.getElementById('random-text').innerHTML = randomText;
 }
 
-// Function to add loading animation
+// Function loading animation
 function addLoadingAnimation() {
-  if (loadingAnimationRunning) return; // Prevent re-running the animation if already running
-  loadingAnimationRunning = true; // Set the flag to indicate loading animation is running
+  if (loadingAnimationRunning) return; 
+  loadingAnimationRunning = true; 
 
   const loadingText = document.getElementById('random-text');
   let dots = 0;
   const intervalId = setInterval(() => {
     loadingText.innerHTML = 'xin chờ một chút' + '.'.repeat(dots);
     dots = (dots + 1) % 4; // Cycle through 0, 1, 2, 3 dots
-  }, 250); // Update every 500ms
-
+  }, 250); 
   setTimeout(() => {
-    clearInterval(intervalId); // Clear the interval to stop the loading animation
-    loadingAnimationRunning = false; // Reset the flag
-    displayRandomText(); // Display random text
-  }, 2200); // Display random text after 3 seconds
+    clearInterval(intervalId); 
+    displayRandomText(); 
+  }, 2200); 
 }
 
-// Execute the loading animation function on window load
+// Execute
 window.onload = addLoadingAnimation;
 
-// Call the loading animation function for the first "xin chờ một chút"
+// Load lần 1
 addLoadingAnimation();
