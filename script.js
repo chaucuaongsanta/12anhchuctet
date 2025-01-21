@@ -47,5 +47,5 @@ function addLoadingAnimation() {
 // Execute
 window.onload = () => {
   addLoadingAnimation();
-  setTimeout(displayRandomText, 3000); // Display random text after 3 seconds
+  setTimeout(displayRandomText, 2000); 
 };
