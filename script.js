@@ -1,6 +1,6 @@
 // Lời chúc
 const texts = [
-  "Hoa khai phú quý, trúc báo bình an.\nCung chúc tân xuân, vạn sự như ý.\nNhân dịp Tết Nguyên đán 2025, xin chúc bạn có một năm mới luôn tràn đầy sức khỏe, thành công và hạnh phúc.",
+  "Hoa khai phú quý, trúc báo bình an.\nCung chúc tân xuân, vạn sự như ý.\n* * *\nNhân dịp Tết Nguyên đán 2025, xin chúc bạn có một năm mới luôn tràn đầy sức khỏe, thành công và hạnh phúc.",
   "Xuân về rộn rã gần xa,\nTài lộc như nước vào nhà.\nChúc nhau sức khỏe thuận hòa,\nMột năm may mắn nở hoa.\nNhân dịp năm mới xuân Ất Tỵ 2025, xin chúc bạn có một năm mới an lành, hoan hỉ.",
   "Phúc lộc đồng nhà, tài lộc đồng gia.\nSức khoẻ dồi dào, tiền vào như nước.\nNhân dịp Tết Nguyên đán 2025, xin chúc bạn có một năm mới an lành, hoan hỉ.",
   "Mừng xuân, chúc Tết mọi nhà,\nAn khang thịnh vượng, hạnh phúc chan hòa.\nCông việc thuận lợi, phát tài,\nNiềm vui viên mãn, chẳng còn âu lo.\nNhân dịp Tết Nguyên đán 2025, xin chúc bạn có một năm mới an lành, hoan hỉ.",
