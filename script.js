@@ -88,7 +88,6 @@ function addImageLoadingAnimations() {
 
 // Execute the image loading animations function on window load
 window.onload = () => {
-  addLoadingAnimation(); // Existing function call
   addImageLoadingAnimations(); // New function call
   
   const intervalId = showLoadingAnimation(); // Start the loading animation
