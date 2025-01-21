@@ -38,14 +38,16 @@ function displayRandomText() {
 function addLoadingAnimation() {
   const loadingText = document.getElementById('random-text');
   let dots = 0;
-  setInterval(() => {
+  const intervalId = setInterval(() => {
     loadingText.innerHTML = 'xin chờ một chút' + '.'.repeat(dots);
-    dots = (dots + 1) % 4; 
-  }, 500); 
+    dots = (dots + 1) % 4;
+  }, 400); 
+
+  setTimeout(() => {
+    clearInterval(intervalId); 
+    displayRandomText(); 
+  }, 2000); 
 }
 
 // Execute
-window.onload = () => {
-  addLoadingAnimation();
-  setTimeout(displayRandomText, 2000); 
-};
+window.onload = addLoadingAnimation;
