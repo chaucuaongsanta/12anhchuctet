@@ -1,10 +1,10 @@
 // Lời chúc
 const texts = [
   "Hoa khai phú quý, trúc báo bình an.\nCung chúc tân xuân, vạn sự như ý.\n* * *\nNhân dịp Tết Nguyên đán 2025, xin chúc bạn có một năm mới luôn tràn đầy sức khỏe, thành công và hạnh phúc.",
-  "Xuân về rộn rã gần xa,\nTài lộc như nước vào nhà.\nChúc nhau sức khỏe thuận hòa,\nMột năm may mắn nở hoa.\nNhân dịp năm mới xuân Ất Tỵ 2025, xin chúc bạn có một năm mới an lành, hoan hỉ.",
-  "Phúc lộc đồng nhà, tài lộc đồng gia.\nSức khoẻ dồi dào, tiền vào như nước.\nNhân dịp Tết Nguyên đán 2025, xin chúc bạn có một năm mới an lành, hoan hỉ.",
-  "Mừng xuân, chúc Tết mọi nhà,\nAn khang thịnh vượng, hạnh phúc chan hòa.\nCông việc thuận lợi, phát tài,\nNiềm vui viên mãn, chẳng còn âu lo.\nNhân dịp Tết Nguyên đán 2025, xin chúc bạn có một năm mới an lành, hoan hỉ.",
-  "Tân niên thịnh vượng tài lộc tới\nXuân mới an khang phúc lộc tràn.\nMừng năm mới 2025, chúc bạn mỗi ngày đều đầy tiếng cười, tâm hồn thư thái và luôn tràn đầy niềm vui.",
+  "Xuân về rộn rã gần xa,\nTài lộc như nước vào nhà.\nChúc nhau sức khỏe thuận hòa,\nMột năm may mắn nở hoa.\n* * *\nNhân dịp năm mới xuân Ất Tỵ 2025, xin chúc bạn có một năm mới an lành, hoan hỉ.",
+  "Phúc lộc đồng nhà, tài lộc đồng gia.\nSức khoẻ dồi dào, tiền vào như nước.\n* * *\nNhân dịp Tết Nguyên đán 2025, xin chúc bạn có một năm mới an lành, hoan hỉ.",
+  "Mừng xuân, chúc Tết mọi nhà,\nAn khang thịnh vượng, hạnh phúc chan hòa.\nCông việc thuận lợi, phát tài,\nNiềm vui viên mãn, chẳng còn âu lo.\n* * *\nNhân dịp Tết Nguyên đán 2025, xin chúc bạn có một năm mới an lành, hoan hỉ.",
+  "Tân niên thịnh vượng tài lộc tới\nXuân mới an khang phúc lộc tràn.\n* * *\nMừng năm mới 2025, chúc bạn mỗi ngày đều đầy tiếng cười, tâm hồn thư thái và luôn tràn đầy niềm vui.",
   "Chúc Tết đến bạn của tôi trăm điều như ý\nMừng xuân sang vạn sự đại thành công.",
   "Năm mới 2025 chúc bạn sức khỏe vô biên, kiếm được nhiều tiền, đời sướng như tiên và chẳng ai làm phiền. Happy New Year!",
   "Happy New Year 2025! Chúc bạn có 1 bầu trời sức khỏe, 1 biển cả tình thương, 1 đại dương tình bạn, 1 điệp khúc tình yêu, 1 người yêu chung thủy, 1 sự nghiệp như ý.",
