@@ -61,7 +61,7 @@ function addLoadingAnimation() {
   const loadingText = document.getElementById('random-text');
   let dots = 0;
   const intervalId = setInterval(() => {
-    loadingText.innerHTML = 'xin chờ một chút' + '.'.repeat(dots);
+    loadingText.innerHTML = 'chờ xíu' + 'u'.repeat(dots);
     dots = (dots + 1) % 4; // Cycle through 0, 1, 2, 3 dots
   }, 250); 
   setTimeout(() => {
