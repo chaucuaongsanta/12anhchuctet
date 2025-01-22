@@ -4,7 +4,7 @@ const texts = [
   "Xuân về rộn rã gần xa,\nTài lộc như nước vào nhà.\nChúc nhau sức khỏe thuận hòa,\nMột năm may mắn nở hoa.\n* * *\nNhân dịp năm mới xuân Ất Tỵ 2025, xin chúc bạn và gia đình có một năm mới luôn tràn đầy sức khỏe, hạnh phúc và thành công cùng một mùa Tết bình an và sum họp bên cạnh những người mình yêu thương. Happy New Year!",
   "Phúc lộc đồng nhà, tài lộc đồng gia.\nSức khoẻ dồi dào, tiền vào như nước.\n* * *\nNhân dịp Tết Nguyên đán 2025, xin chúc bạn có một năm mới an lành, hoan hỉ, thành công trong học tập, sự nghiệp và luôn tràn đầy niềm vui bên gia đình.",
   "Mừng xuân, chúc Tết mọi nhà,\nAn khang thịnh vượng, hạnh phúc chan hòa.\nCông việc thuận lợi, phát tài,\nNiềm vui viên mãn, chẳng còn âu lo.\n* * *\nNhân dịp Tết Nguyên đán 2025, xin chúc bạn và gia đình có một năm mới luôn bình an, hạnh phúc, dồi dào sức khoẻ, tiền vào như nước, 8386, tấn tài tấn lộc.",
-  "Tân niên thịnh vượng tài lộc tới\nXuân mới an khang phúc lộc tràn.\n* * *\nMừng năm mới 2025, chúc bạn mỗi ngày đều đầy tiếng cười, tâm hồn thư thái tâm hồn thư thái và luôn được yêu thương.",
+  "Tân niên thịnh vượng tài lộc tới\nXuân mới an khang phúc lộc tràn.\n* * *\nMừng năm mới 2025, chúc bạn mỗi ngày đều đầy tiếng cười, tâm hồn thư thái và luôn được yêu thương.",
   "Chúc Tết đến bạn của tôi trăm điều như ý\nMừng xuân sang vạn sự đại thành công.",
   "Năm mới 2025 chúc bạn sức khỏe vô biên, kiếm được nhiều tiền, đời sướng như tiên và chẳng ai làm phiền. Happy New Year!",
   "Happy New Year 2025! Chúc bạn có 1 bầu trời sức khỏe, 1 biển cả tình thương, 1 đại dương tình bạn, 1 điệp khúc tình yêu, 1 người yêu chung thủy, nghiệp sáng ngời, 1 gia đình thịnh vượng. Chúc cả gia đình bạn vạn sự như ý, tỉ sự như mơ, triệu triệu bất ngờ, không chờ cũng đến!",
@@ -37,7 +37,7 @@ function displayRandomText() {
 
   let randomIndex;
   let randomText;
-  const isSecret = Math.random() < 0.0001;
+  const isSecret = Math.random() < 0.001;
 
   if (isSecret) {
     randomText = secretText;
